@@ -1,0 +1,7 @@
+baseURL = 'https://HongKy2606-bio.github.io/'
+languageCode = 'en-us'
+title = 'Haha'
+theme = 'PaperMod'
+[params]
+math = true
+
