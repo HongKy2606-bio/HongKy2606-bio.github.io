@@ -2,10 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/di-truy%E1%BB%81n-h%E1%BB%8Dc/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/firstblog/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-sinh-h%E1%BB%8Dc/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mendel/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/secondblog/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archives/</loc>
   </url>
 </urlset>

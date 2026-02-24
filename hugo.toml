@@ -1,7 +1,23 @@
 baseURL = 'https://HongKy2606-bio.github.io/'
 languageCode = 'en-us'
-title = 'Haha'
+title = 'BioLearner'
 theme = 'PaperMod'
-[params]
-math = true
 
+[params]
+  math = true
+  ShowToc = true
+  [params.homeInfoParams]
+    Title = "Welcome to my BioLearner Blog wave"
+    Content = "My research interest lies in computationally guided evolutionary design of therapeutic systems, integrating machine learning, systems biology, and experimental evolution to enable next-generation personalized gene and immune therapies...."
+
+[[menu.main]]
+  identifier = "categories"
+  name = "Categories"
+  url = "/categories/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 40
