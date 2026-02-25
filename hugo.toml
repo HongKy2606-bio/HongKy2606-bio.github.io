@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'BioLearner'
 theme = 'PaperMod'
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   math = true
   ShowToc = true

@@ -13,8 +13,13 @@
       <link>http://localhost:1313/posts/secondblog/</link>
       <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
       <guid>http://localhost:1313/posts/secondblog/</guid>
-      <description>&lt;h3 id=&#34;giải-toán-di-truyền-bằng-python&#34;&gt;Giải toán di truyền bằng Python.&lt;/h3&gt;
-&lt;p&gt;Quy luật 1 của Mendel.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;giải-toán-di-truyền-bằng-python&#34;&gt;Giải toán di truyền bằng Python&lt;/h1&gt;
+&lt;h2 id=&#34;1-quy-luật-phân-ly-độc-lập&#34;&gt;1. Quy luật phân ly độc lập&lt;/h2&gt;
+&lt;p&gt;Quan trọng để hiểu được mục này, cần blablabla&lt;/p&gt;
+&lt;h2 id=&#34;2-các-bước-thực-hiện-trong-python&#34;&gt;2. Các bước thực hiện trong Python&lt;/h2&gt;
+&lt;p&gt;cmiwoef&lt;/p&gt;
+&lt;h2 id=&#34;3-giải-nghĩa-từng-bước-và-cách-để-đạt-được&#34;&gt;3. Giải nghĩa từng bước và cách để đạt được&lt;/h2&gt;
+&lt;p&gt;Define&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

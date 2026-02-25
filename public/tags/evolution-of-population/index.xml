@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Evolution of Population on BioLearner</title>
+    <link>http://localhost:1313/tags/evolution-of-population/</link>
+    <description>Recent content in Evolution of Population on BioLearner</description>
+    <generator>Hugo -- 0.153.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Feb 2026 19:06:50 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/evolution-of-population/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sec</title>
+      <link>http://localhost:1313/posts/calculating_expected_offspring/</link>
+      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
+      <guid>http://localhost:1313/posts/calculating_expected_offspring/</guid>
+      <description>&lt;h1 id=&#34;rosalind--calculating-expected-offspring&#34;&gt;ROSALIND | Calculating Expected Offspring&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://rosalind.info/problems/iev/&#34;&gt;This&lt;/a&gt; problem:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Given&lt;/strong&gt;: Six non-negative integers, each of which does not exceed 20,000. The integers correspond to the number of couples in a population possessing each genotype pairing for a given factor. In order, the six given integers represent the number of couples having the following genotypes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;AA-AA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AA-Aa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AA-aa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Aa-Aa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Aa-aa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;aa-aa&lt;/p&gt;
+&lt;p&gt;1 0 0 1 0 1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;: The expected number of offspring displaying the dominant phenotype in the next generation, under the assumption that every couple has exactly two offspring.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

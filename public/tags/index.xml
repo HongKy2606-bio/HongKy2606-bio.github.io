@@ -16,6 +16,20 @@
       <description></description>
     </item>
     <item>
+      <title>Di Truyền Quần Thể</title>
+      <link>http://localhost:1313/tags/di-truy%E1%BB%81n-qu%E1%BA%A7n-th%E1%BB%83/</link>
+      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
+      <guid>http://localhost:1313/tags/di-truy%E1%BB%81n-qu%E1%BA%A7n-th%E1%BB%83/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Evolution of Population</title>
+      <link>http://localhost:1313/tags/evolution-of-population/</link>
+      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
+      <guid>http://localhost:1313/tags/evolution-of-population/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Mendel</title>
       <link>http://localhost:1313/tags/mendel/</link>
       <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
@@ -27,6 +41,13 @@
       <link>http://localhost:1313/tags/python/</link>
       <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
       <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ROSALIND</title>
+      <link>http://localhost:1313/tags/rosalind/</link>
+      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
+      <guid>http://localhost:1313/tags/rosalind/</guid>
       <description></description>
     </item>
   </channel>

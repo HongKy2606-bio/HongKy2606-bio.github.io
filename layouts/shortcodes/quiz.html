@@ -1,0 +1,51 @@
+<div class="quiz-container" id="quiz-{{ .Ordinal }}" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <p><strong>Câu hỏi:</strong> {{ .Get "question" }}</p>
+    
+    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <input type="text" class="quiz-input" placeholder="Nhập đáp án..." style="padding: 5px; border-radius: 4px; border: 1px solid #ddd; flex-grow: 1;">
+        <button class="quiz-btn" style="padding: 5px 15px; cursor: pointer; background: var(--primary); color: white; border: none; border-radius: 4px;">Kiểm tra</button>
+    </div>
+
+    <div class="quiz-result" style="display: none; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; margin-top: 10px;">
+        <p style="color: #166534; font-weight: bold; margin-bottom: 5px;">✅ Chính xác! Cách giải:</p>
+        {{ .Inner | markdownify }}
+    </div>
+
+    <p class="quiz-error" style="display: none; color: #dc2626; font-size: 0.9em; margin-top: 5px;">❌ Sai rồi, thử lại nhé!</p>
+</div>
+
+<script>
+(function() {
+    // 1. Tìm đúng cái cụm câu hỏi hiện tại dựa vào ID
+    var quizDiv = document.getElementById('quiz-{{ .Ordinal }}');
+    if (!quizDiv) return;
+
+    // 2. Tìm các thành phần bên trong nó
+    var btn = quizDiv.querySelector('.quiz-btn');
+    var input = quizDiv.querySelector('.quiz-input');
+    var resultDiv = quizDiv.querySelector('.quiz-result');
+    var errorMsg = quizDiv.querySelector('.quiz-error');
+    
+    // Lấy đáp án từ markdown và chuyển thành chữ thường
+    var correctAns = "{{ .Get `answer` }}".toLowerCase().trim();
+
+    // 3. Lắng nghe sự kiện Click
+    btn.addEventListener('click', function() {
+        var userAns = input.value.toLowerCase().trim();
+        if (userAns === correctAns) {
+            resultDiv.style.display = 'block';
+            errorMsg.style.display = 'none';
+        } else {
+            resultDiv.style.display = 'none';
+            errorMsg.style.display = 'block';
+        }
+    });
+
+    // 🌟 Tính năng Bonus: Ấn phím Enter để kiểm tra luôn cho tiện
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            btn.click();
+        }
+    });
+})();
+</script>
