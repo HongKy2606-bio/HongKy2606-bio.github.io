@@ -9,7 +9,7 @@
     <lastBuildDate>Tue, 24 Feb 2026 19:06:50 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/di-truy%E1%BB%81n-qu%E1%BA%A7n-th%E1%BB%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sec</title>
+      <title>ROSALIND - IEV</title>
       <link>http://localhost:1313/posts/calculating_expected_offspring/</link>
       <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
       <guid>http://localhost:1313/posts/calculating_expected_offspring/</guid>
@@ -17,26 +17,15 @@
 &lt;p&gt;&lt;a href=&#34;https://rosalind.info/problems/iev/&#34;&gt;This&lt;/a&gt; problem:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Given&lt;/strong&gt;: Six non-negative integers, each of which does not exceed 20,000. The integers correspond to the number of couples in a population possessing each genotype pairing for a given factor. In order, the six given integers represent the number of couples having the following genotypes:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;AA-AA&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AA-Aa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AA-aa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Aa-Aa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Aa-aa&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;aa-aa&lt;/p&gt;
-&lt;p&gt;1 0 0 1 0 1&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;AA-AA&lt;/li&gt;
+&lt;li&gt;AA-Aa&lt;/li&gt;
+&lt;li&gt;AA-aa&lt;/li&gt;
+&lt;li&gt;Aa-Aa&lt;/li&gt;
+&lt;li&gt;Aa-aa&lt;/li&gt;
+&lt;li&gt;aa-aa&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;Sample Data Set:
+&lt;code&gt;1 0 0 1 0 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;: The expected number of offspring displaying the dominant phenotype in the next generation, under the assumption that every couple has exactly two offspring.&lt;/p&gt;</description>
     </item>
   </channel>

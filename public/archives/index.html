@@ -72,7 +72,14 @@
 
 </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" 
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]
+    });">
+</script>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -126,12 +133,12 @@
 <div class="archive-year">
   <h2 class="archive-year-header" id="2026">
     <a class="archive-header-link" href="#2026">2026</a>
-    <sup class="archive-count">&nbsp;2</sup>
+    <sup class="archive-count">&nbsp;4</sup>
   </h2>
   <div class="archive-month">
     <h3 class="archive-month-header" id="2026-February">
       <a class="archive-header-link" href="#2026-February">February</a>
-      <sup class="archive-count">&nbsp;2</sup>
+      <sup class="archive-count">&nbsp;4</sup>
     </h3>
     <div class="archive-posts">
       <div class="archive-entry">
@@ -141,10 +148,22 @@
         <a class="entry-link" aria-label="post link to FirstBlog" href="http://localhost:1313/posts/firstblog/"></a>
       </div>
       <div class="archive-entry">
+        <h3 class="archive-entry-title entry-hint-parent">ROSALIND - IEV
+        </h3>
+        <div class="archive-meta"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></div>
+        <a class="entry-link" aria-label="post link to ROSALIND - IEV" href="http://localhost:1313/posts/calculating_expected_offspring/"></a>
+      </div>
+      <div class="archive-entry">
         <h3 class="archive-entry-title entry-hint-parent">Sec
         </h3>
         <div class="archive-meta"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></div>
         <a class="entry-link" aria-label="post link to Sec" href="http://localhost:1313/posts/secondblog/"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title entry-hint-parent">What Stanford students actually use ChatGPT for
+        </h3>
+        <div class="archive-meta"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></div>
+        <a class="entry-link" aria-label="post link to What Stanford students actually use ChatGPT for" href="http://localhost:1313/posts/purpose_for_keep_moving/"></a>
       </div>
     </div>
   </div>

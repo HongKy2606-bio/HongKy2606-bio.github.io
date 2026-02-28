@@ -73,7 +73,14 @@
 
 </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" 
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]
+    });">
+</script>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -125,6 +132,12 @@
 <ul class="terms-tags">
     <li>
         <a href="http://localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh-sinh-h%E1%BB%8Dc/">Lập trình sinh học <sup><strong><sup>2</sup></strong></sup> </a>
+    </li>
+    <li>
+        <a href="http://localhost:1313/categories/motivation/">motivation <sup><strong><sup>1</sup></strong></sup> </a>
+    </li>
+    <li>
+        <a href="http://localhost:1313/categories/truy%E1%BB%81n-%C4%91%E1%BB%99ng-l%E1%BB%B1c/">truyền động lực <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
 </ul>
     </main>

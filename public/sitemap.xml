@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
@@ -9,6 +12,12 @@
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/di-truy%E1%BB%81n-h%E1%BB%8Dc/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/di-truy%E1%BB%81n-qu%E1%BA%A7n-th%E1%BB%83/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/evolution-of-population/</loc>
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/firstblog/</loc>
@@ -20,10 +29,22 @@
     <loc>http://localhost:1313/tags/mendel/</loc>
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/motivation/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/motivation/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rosalind/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/calculating_expected_offspring/</loc>
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/secondblog/</loc>
@@ -32,7 +53,11 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/calculating_expected_offspring/</loc>
+    <loc>http://localhost:1313/categories/truy%E1%BB%81n-%C4%91%E1%BB%99ng-l%E1%BB%B1c/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/purpose_for_keep_moving/</loc>
+    <lastmod>2026-02-24T19:06:50+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url>

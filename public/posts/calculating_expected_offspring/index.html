@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>ROSALIND - IEV | BioLearner</title>
-<meta name="keywords" content="Python, ROSALIND, Evolution of Population, Di truyền quần thể, Di truyền học">
+<meta name="keywords" content="Python, ROSALIND, Evolution of Population, Di truyền quần thể, Di truyền học, Mendel">
 <meta name="description" content="ROSALIND | Calculating Expected Offspring
 This problem:
 Given: Six non-negative integers, each of which does not exceed 20,000. The integers correspond to the number of couples in a population possessing each genotype pairing for a given factor. In order, the six given integers represent the number of couples having the following genotypes:
@@ -85,7 +85,14 @@ Output: The expected number of offspring displaying the dominant phenotype in th
 
 </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" 
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]
+    });">
+</script>
 </head>
 <body id="top">
     <header class="header">
@@ -142,7 +149,7 @@ Output: The expected number of offspring displaying the dominant phenotype in th
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/images/Law-of-Segregation.jpg" alt="Quy luật 1 của Mendel">
+        <img loading="eager" src="http://localhost:1313/images/rosalind_iev.jpg" alt="Quy luật 1 của Mendel">
         <figcaption>Quy luật 1 của Mendel</figcaption>
 </figure><div class="toc">
     <details >
@@ -155,7 +162,17 @@ Output: The expected number of offspring displaying the dominant phenotype in th
                     <a href="#rosalind--calculating-expected-offspring" aria-label="ROSALIND | Calculating Expected Offspring">ROSALIND | Calculating Expected Offspring</a><ul>
                         
                 <li>
-                    <a href="#1-g%c3%b3c-%c4%91%e1%bb%99-to%c3%a1n-h%e1%bb%8dc---x%c3%a1c-su%e1%ba%a5t--th%e1%bb%91ng-k%c3%aa" aria-label="1. Góc độ Toán học - Xác suất &amp; Thống kê">1. Góc độ Toán học - Xác suất &amp; Thống kê</a></li>
+                    <a href="#1-g%c3%b3c-%c4%91%e1%bb%99-to%c3%a1n-h%e1%bb%8dc---x%c3%a1c-su%e1%ba%a5t--th%e1%bb%91ng-k%c3%aa" aria-label="1. Góc độ Toán học - Xác suất &amp; Thống kê">1. Góc độ Toán học - Xác suất &amp; Thống kê</a><ul>
+                        
+                <li>
+                    <a href="#%c4%91%e1%bb%8bnh-ngh%c4%a9a-gi%c3%a1-tr%e1%bb%8b-k%e1%bb%b3-v%e1%bb%8dng" aria-label="Định nghĩa Giá trị Kỳ vọng">Định nghĩa Giá trị Kỳ vọng</a></li>
+                <li>
+                    <a href="#v%c3%ad-d%e1%bb%a5-minh-h%e1%bb%8da-con-x%c3%bac-x%e1%ba%afc-s%c3%a1u-m%e1%ba%b7t" aria-label="Ví dụ minh họa: Con xúc xắc sáu mặt">Ví dụ minh họa: Con xúc xắc sáu mặt</a></li>
+                <li>
+                    <a href="#bi%e1%ba%bfn-ng%e1%ba%abu-nhi%c3%aan-%c4%91%e1%bb%93ng-nh%e1%ba%a5t-uniform-random-variable" aria-label="Biến ngẫu nhiên đồng nhất (Uniform Random Variable)">Biến ngẫu nhiên đồng nhất (Uniform Random Variable)</a></li>
+                <li>
+                    <a href="#th%e1%bb%ad-th%c3%a1ch-nh%e1%bb%8f" aria-label="Thử thách nhỏ">Thử thách nhỏ</a></li></ul>
+                </li>
                 <li>
                     <a href="#2-g%c3%b3c-%c4%91%e1%bb%99-sinh-h%e1%bb%8dc" aria-label="2. Góc độ Sinh học">2. Góc độ Sinh học</a></li>
                 <li>
@@ -185,9 +202,78 @@ Output: The expected number of offspring displaying the dominant phenotype in th
 <p>Sample Output:
 <code>3.5</code></p>
 <h2 id="1-góc-độ-toán-học---xác-suất--thống-kê">1. Góc độ Toán học - Xác suất &amp; Thống kê<a hidden class="anchor" aria-hidden="true" href="#1-góc-độ-toán-học---xác-suất--thống-kê">#</a></h2>
-<p>Quan trọng để hiểu được mục này, cần blablabla</p>
-<h2 id="2-góc-độ-sinh-học">2. Góc độ Sinh học<a hidden class="anchor" aria-hidden="true" href="#2-góc-độ-sinh-học">#</a></h2>
+<h3 id="định-nghĩa-giá-trị-kỳ-vọng">Định nghĩa Giá trị Kỳ vọng<a hidden class="anchor" aria-hidden="true" href="#định-nghĩa-giá-trị-kỳ-vọng">#</a></h3>
+<p>Đối với một biến ngẫu nhiên $X$ nhận các giá trị nguyên từ $1$ đến $n$, <strong>Giá trị kỳ vọng</strong> (Expected Value) của $X$ được tính bằng công thức:</p>
+$$E(X) = \sum_{k=1}^{n} k \times Pr(X = k)$$<p>Giá trị kỳ vọng cung cấp cho chúng ta một cách để tính toán giá trị trung bình dài hạn của một biến ngẫu nhiên qua một số lượng lớn các phép thử.</p>
+<h3 id="ví-dụ-minh-họa-con-xúc-xắc-sáu-mặt">Ví dụ minh họa: Con xúc xắc sáu mặt<a hidden class="anchor" aria-hidden="true" href="#ví-dụ-minh-họa-con-xúc-xắc-sáu-mặt">#</a></h3>
+<p>Hãy xét ví dụ về $X$ là số nút trên một con xúc xắc sáu mặt đồng chất. Sau một số lượng lớn các lần tung, chúng ta mong đợi nhận được giá trị trung bình là $3.5$ (ngay cả khi việc tung ra một mặt $3.5$ là điều không thể).</p>
+<p>Công thức tính giá trị kỳ vọng xác nhận điều này:</p>
+$$E(X) = \sum_{k=1}^{6} k \times Pr(X = k) = 3.5$$<h3 id="biến-ngẫu-nhiên-đồng-nhất-uniform-random-variable">Biến ngẫu nhiên đồng nhất (Uniform Random Variable)<a hidden class="anchor" aria-hidden="true" href="#biến-ngẫu-nhiên-đồng-nhất-uniform-random-variable">#</a></h3>
+<p>Tổng quát hơn, một biến ngẫu nhiên mà trong đó mọi kết quả cách đều nhau đều có cùng một xác suất được gọi là <strong>Biến ngẫu nhiên đồng nhất</strong> (trong ví dụ về con xúc xắc, &ldquo;khoảng cách đều&rdquo; này bằng $1$).</p>
+<p>Chúng ta có thể khái quát hóa ví dụ về con xúc xắc: Nếu $X$ là một biến ngẫu nhiên đồng nhất với giá trị nhỏ nhất có thể là $a$ và giá trị lớn nhất là $b$, thì:</p>
+$$E(X) = \frac{a + b}{2}$$<h3 id="thử-thách-nhỏ">Thử thách nhỏ<a hidden class="anchor" aria-hidden="true" href="#thử-thách-nhỏ">#</a></h3>
+<p>Nếu $Y$ là biến ngẫu nhiên liên quan đến kết quả của lần tung xúc xắc thứ hai, dựa trên tính chất tuyến tính của kỳ vọng:
+</p>
+$$E(X + Y) = E(X) + E(Y)$$<p>Hãy tính toán và nhập kết quả vào ô dưới đây:</p>
 <div class="quiz-container" id="quiz-0" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <p><strong>Câu hỏi:</strong> Giá trị kỳ vọng của tổng hai con xúc xắc E(X &#43; Y) bằng bao nhiêu?</p>
+    
+    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <input type="text" class="quiz-input" placeholder="Nhập đáp án..." style="padding: 5px; border-radius: 4px; border: 1px solid #ddd; flex-grow: 1;">
+        <button class="quiz-btn" style="padding: 5px 15px; cursor: pointer; background: var(--primary); color: white; border: none; border-radius: 4px;">Kiểm tra</button>
+    </div>
+
+    <div class="quiz-result" style="display: none; padding: 10px; background: #f0fdf4; border-left: 4px solid #22c55e; margin-top: 10px;">
+        <p style="color: #166534; font-weight: bold; margin-bottom: 5px;">✅ Chính xác! Cách giải:</p>
+        <p><strong>Giải thích:</strong>
+Vì $X$ và $Y$ là hai lần tung xúc xắc độc lập nhưng có cùng phân phối, ta có:</p>
+<ul>
+<li>$E(X) = 3.5$</li>
+<li>$E(Y) = 3.5$
+Do đó: $E(X + Y) = 3.5 + 3.5 = 7$.</li>
+</ul>
+    </div>
+
+    <p class="quiz-error" style="display: none; color: #dc2626; font-size: 0.9em; margin-top: 5px;">❌ Sai rồi, thử lại nhé!</p>
+</div>
+
+<script>
+(function() {
+    
+    var quizDiv = document.getElementById('quiz-0');
+    if (!quizDiv) return;
+
+    
+    var btn = quizDiv.querySelector('.quiz-btn');
+    var input = quizDiv.querySelector('.quiz-input');
+    var resultDiv = quizDiv.querySelector('.quiz-result');
+    var errorMsg = quizDiv.querySelector('.quiz-error');
+    
+    
+    var correctAns = "7".toLowerCase().trim();
+
+    
+    btn.addEventListener('click', function() {
+        var userAns = input.value.toLowerCase().trim();
+        if (userAns === correctAns) {
+            resultDiv.style.display = 'block';
+            errorMsg.style.display = 'none';
+        } else {
+            resultDiv.style.display = 'none';
+            errorMsg.style.display = 'block';
+        }
+    });
+
+    
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            btn.click();
+        }
+    });
+})();
+</script>
+<h2 id="2-góc-độ-sinh-học">2. Góc độ Sinh học<a hidden class="anchor" aria-hidden="true" href="#2-góc-độ-sinh-học">#</a></h2>
+<div class="quiz-container" id="quiz-1" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; margin: 20px 0;">
     <p><strong>Câu hỏi:</strong> Biết Allele A (Xanh) trội hơn Allele a (Vàng). Cây đậu Hà Lan thuần chủng hạt vàng (AA) lai với hạt xanh cho F1 toàn hạt gì?</p>
     
     <div style="display: flex; gap: 10px; margin-bottom: 10px;">
@@ -211,7 +297,7 @@ Dựa theo quy luật phân ly của Mendel:</p>
 <script>
 (function() {
     
-    var quizDiv = document.getElementById('quiz-0');
+    var quizDiv = document.getElementById('quiz-1');
     if (!quizDiv) return;
 
     
@@ -243,9 +329,16 @@ Dựa theo quy luật phân ly của Mendel:</p>
     });
 })();
 </script>
-<h2 id="3-bài-giải">3. Bài giải<a hidden class="anchor" aria-hidden="true" href="#3-bài-giải">#</a></h2>
-<p>Defin</p>
-
+<p>Với câu hỏi cơ bản ở phía trên, thì các bạn có thể thấy rằng, nếu cặp bố mẹ kiểu số 3.AA-aa này sinh 2 con non, thì số con non có kiểu hình trội (A-, Xanh) là 2 con.
+Như vậy với mỗi cặp từ 1 - 6 tương ứng có số con non kiểu hình trội tương ứng là -</p>
+<p><code>2 2 2 1.5 1 0</code></p>
+<p>Giá trị kỳ vọng (Expected value) sau một thế hệ, sẽ có phương trình
+</p>
+$$E = a\cdot2 + b\cdot2 + c\cdot2 + d\cdot1.5 + e\cdot1 + f\cdot o $$<h2 id="3-bài-giải">3. Bài giải<a hidden class="anchor" aria-hidden="true" href="#3-bài-giải">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">iev</span>(a, b, c, d, e, f):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> str(a<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> b<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> d<span style="color:#f92672">*</span><span style="color:#ae81ff">1.5</span> <span style="color:#f92672">+</span> e)
+</span></span><span style="display:flex;"><span>print(iev(<span style="color:#ae81ff">17463</span>, <span style="color:#ae81ff">16365</span>, <span style="color:#ae81ff">19779</span>, <span style="color:#ae81ff">19776</span>, <span style="color:#ae81ff">18820</span>, <span style="color:#ae81ff">19228</span>))
+</span></span></code></pre></div>
 
   </div>
 
@@ -256,6 +349,7 @@ Dựa theo quy luật phân ly của Mendel:</p>
       <li><a href="http://localhost:1313/tags/evolution-of-population/">Evolution of Population</a></li>
       <li><a href="http://localhost:1313/tags/di-truy%E1%BB%81n-qu%E1%BA%A7n-th%E1%BB%83/">Di Truyền Quần Thể</a></li>
       <li><a href="http://localhost:1313/tags/di-truy%E1%BB%81n-h%E1%BB%8Dc/">Di Truyền Học</a></li>
+      <li><a href="http://localhost:1313/tags/mendel/">Mendel</a></li>
     </ul>
   </footer>
 </article>
