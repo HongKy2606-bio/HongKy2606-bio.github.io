@@ -16,7 +16,7 @@ theme = 'PaperMod'
   math = true
   ShowToc = true
   [params.homeInfoParams]
-    Title = "Welcome to my BioLearner Blog wave"
+    Title = "Welcome to my BioLearner Blog"
     Content = "My research interest lies in computationally guided evolutionary design of therapeutic systems, integrating machine learning, systems biology, and experimental evolution to enable next-generation personalized gene and immune therapies...."
 
 [[menu.main]]

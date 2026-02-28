@@ -9,60 +9,6 @@
     <lastBuildDate>Tue, 24 Feb 2026 19:06:50 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>FirstBlog</title>
-      <link>http://localhost:1313/posts/firstblog/</link>
-      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
-      <guid>http://localhost:1313/posts/firstblog/</guid>
-      <description>&lt;h1 id=&#34;logo&#34;&gt;Logo&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;logo&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/HCMUT_official_logo.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;ssmal&#34;&gt;ssmal&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;When they leak the high bits of p+q, the rest is just a distributed search — rent the cloud and flex.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;challenge-description&#34;&gt;Challenge Description&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;chall.py&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; Crypto.Util.number &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; getPrime, isPrime
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; getPrime(&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;q &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; getPrime(&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt;) 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;N &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; p&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;q
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;65537&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;flag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;BPCTF&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{redact}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pow(int&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_bytes(flag, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;big&amp;#39;&lt;/span&gt;), e, N)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gift &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (p&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;q)&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;40&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;N = &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;N&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;c = &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;c&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;gift = &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;gift&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;N = 5758124415184468271370250630048687746812715972269092676700260830924771547226161680827118153372606993872590019171624226415454063566537634596851695999313069
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;c = 4258014490469377191207443169980969026536758269486705363402307773455639773007422079769567310663689852817179059312032143236005345809847891632360620594960862
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;gift = 139200565274113272217771369795858181556454302427519574149545982701
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The program leaks &lt;code&gt;N = p*q&lt;/code&gt;, the ciphertext &lt;code&gt;c&lt;/code&gt;, and &lt;code&gt;gift = (p+q) &amp;gt;&amp;gt; 40&lt;/code&gt; — an approximation of &lt;code&gt;s = p+q&lt;/code&gt; with the lower 40 bits removed. Recovering &lt;code&gt;p&lt;/code&gt; and &lt;code&gt;q&lt;/code&gt; (and thus &lt;code&gt;d&lt;/code&gt;) reduces to finding the unknown 40 lower bits of &lt;code&gt;s&lt;/code&gt;. Once &lt;code&gt;p,q&lt;/code&gt; are recovered, decrypt &lt;code&gt;c&lt;/code&gt; to obtain the flag.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>ROSALIND - IEV</title>
       <link>http://localhost:1313/posts/calculating_expected_offspring/</link>
       <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
@@ -81,31 +27,6 @@
 &lt;p&gt;Sample Data Set:
 &lt;code&gt;1 0 0 1 0 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;: The expected number of offspring displaying the dominant phenotype in the next generation, under the assumption that every couple has exactly two offspring.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Sec</title>
-      <link>http://localhost:1313/posts/secondblog/</link>
-      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
-      <guid>http://localhost:1313/posts/secondblog/</guid>
-      <description>&lt;h1 id=&#34;giải-toán-di-truyền-bằng-python&#34;&gt;Giải toán di truyền bằng Python&lt;/h1&gt;
-&lt;h2 id=&#34;1-quy-luật-phân-ly-độc-lập&#34;&gt;1. Quy luật phân ly độc lập&lt;/h2&gt;
-&lt;p&gt;Quan trọng để hiểu được mục này, cần blablabla&lt;/p&gt;
-&lt;h2 id=&#34;2-các-bước-thực-hiện-trong-python&#34;&gt;2. Các bước thực hiện trong Python&lt;/h2&gt;
-&lt;p&gt;cmiwoef&lt;/p&gt;
-&lt;h2 id=&#34;3-giải-nghĩa-từng-bước-và-cách-để-đạt-được&#34;&gt;3. Giải nghĩa từng bước và cách để đạt được&lt;/h2&gt;
-&lt;p&gt;Define&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>What Stanford students actually use ChatGPT for</title>
-      <link>http://localhost:1313/posts/purpose_for_keep_moving/</link>
-      <pubDate>Tue, 24 Feb 2026 19:06:50 +0700</pubDate>
-      <guid>http://localhost:1313/posts/purpose_for_keep_moving/</guid>
-      <description>&lt;h1 id=&#34;rethink-the-journey-where-ai-support-us-or-we-depent-on-ai&#34;&gt;Rethink the Journey where AI support us, or we depent on AI&lt;/h1&gt;
-&lt;h2 id=&#34;1-what-kind-of-work-do-you-delegate-for-chatgpt--what-kinds-of-work-do-you-keep-for-yourself&#34;&gt;1. What kind of work do you delegate for ChatGPT &amp;amp; What kinds of work do you keep for yourself?&lt;/h2&gt;
-&lt;h2 id=&#34;2-has-ai-impacted-your-decision-on-what-to-major-in&#34;&gt;2. Has AI impacted your decision on what to major in?&lt;/h2&gt;
-&lt;p&gt;Về vấn đề liệu có phụ thuộc và giới hạn bản thân&lt;/p&gt;
-&lt;h2 id=&#34;3-do-you-trust-that-professors-know-how-to-teach-in-ai-world&#34;&gt;3. Do you trust that professors know how to teach in AI world?&lt;/h2&gt;
-&lt;p&gt;Về vấn đề chọn nơi học liệu còn có bị cản lại&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

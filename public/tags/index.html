@@ -81,6 +81,38 @@
         ]
     });">
 </script>
+
+<style>
+     
+    .main {
+        background: rgba(255, 255, 255, 0.97) !important;  
+        padding: 40px !important;  
+        border-radius: 12px !important;  
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;  
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+     
+    .header {
+        background: rgba(255, 255, 255, 0.97) !important;
+        padding: 10px 30px !important;
+        border-radius: 0 0 12px 12px !important;  
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    }
+
+     
+    .dark .main, .dark .header {
+        background: rgba(29, 30, 32, 0.97) !important;  
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    }
+
+     
+    .main, .header {
+        position: relative;
+        z-index: 10;
+    }
+</style>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -131,10 +163,7 @@
 
 <ul class="terms-tags">
     <li>
-        <a href="http://localhost:1313/tags/ai/">AI <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/di-truy%E1%BB%81n-h%E1%BB%8Dc/">Di truyền học <sup><strong><sup>2</sup></strong></sup> </a>
+        <a href="http://localhost:1313/tags/di-truy%E1%BB%81n-h%E1%BB%8Dc/">Di truyền học <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
         <a href="http://localhost:1313/tags/di-truy%E1%BB%81n-qu%E1%BA%A7n-th%E1%BB%83/">Di truyền quần thể <sup><strong><sup>1</sup></strong></sup> </a>
@@ -146,10 +175,7 @@
         <a href="http://localhost:1313/tags/mendel/">Mendel <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
-        <a href="http://localhost:1313/tags/motivation/">motivation <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="http://localhost:1313/tags/python/">Python <sup><strong><sup>2</sup></strong></sup> </a>
+        <a href="http://localhost:1313/tags/python/">Python <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
         <a href="http://localhost:1313/tags/rosalind/">ROSALIND <sup><strong><sup>1</sup></strong></sup> </a>
@@ -170,7 +196,101 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+document.addEventListener("DOMContentLoaded", function() {
+    
+    
+    document.querySelectorAll('.main, .header, .footer').forEach(el => {
+        el.style.position = 'relative';
+        el.style.zIndex = '10';
+    });
+
+    
+    const canvas = document.createElement('canvas');
+    canvas.id = 'particle-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100vw';
+    canvas.style.height = '100vh';
+    canvas.style.zIndex = '0'; 
+    canvas.style.pointerEvents = 'none'; 
+    document.body.prepend(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    const numParticles = 70;
+    const maxDistance = 170;
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 2; 
+            this.vy = (Math.random() - 0.5) * 2;
+            this.radius = 3; 
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            
+            ctx.fillStyle = 'rgba(129,130,131)'; 
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height); 
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                let dx = particles[i].x - particles[j].x;
+                let dy = particles[i].y - particles[j].y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < maxDistance) {
+                    let alpha = 1 - (distance / maxDistance); 
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    
+                    ctx.strokeStyle = `rgba(129,130,131, ${alpha})`; 
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+});
+</script>
 
 <script>
     let menu = document.getElementById('menu');

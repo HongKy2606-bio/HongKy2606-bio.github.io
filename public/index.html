@@ -82,6 +82,38 @@
         ]
     });">
 </script>
+
+<style>
+     
+    .main {
+        background: rgba(255, 255, 255, 0.97) !important;  
+        padding: 40px !important;  
+        border-radius: 12px !important;  
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;  
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+     
+    .header {
+        background: rgba(255, 255, 255, 0.97) !important;
+        padding: 10px 30px !important;
+        border-radius: 0 0 12px 12px !important;  
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    }
+
+     
+    .dark .main, .dark .header {
+        background: rgba(29, 30, 32, 0.97) !important;  
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    }
+
+     
+    .main, .header {
+        position: relative;
+        z-index: 10;
+    }
+</style>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -128,7 +160,7 @@
 <main class="main"> 
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>Welcome to my BioLearner Blog wave</h1>
+        <h1>Welcome to my BioLearner Blog</h1>
     </header>
     <div class="entry-content">
         My research interest lies in computationally guided evolutionary design of therapeutic systems, integrating machine learning, systems biology, and experimental evolution to enable next-generation personalized gene and immune therapies&hellip;.
@@ -138,21 +170,6 @@
 </div>
 
     </footer>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">FirstBlog
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Logo ssmal When they leak the high bits of p&#43;q, the rest is just a distributed search — rent the cloud and flex.
-Challenge Description chall.py
-from Crypto.Util.number import getPrime, isPrime p = getPrime(256) q = getPrime(256) N = p*q e = 65537 flag = b&#39;BPCTF{redact}&#39; c = pow(int.from_bytes(flag, &#39;big&#39;), e, N) gift = (p&#43;q)&gt;&gt;40 print(f&#39;N = {N}\nc = {c}\ngift = {gift}&#39;) &#34;&#34;&#34; N = 5758124415184468271370250630048687746812715972269092676700260830924771547226161680827118153372606993872590019171624226415454063566537634596851695999313069 c = 4258014490469377191207443169980969026536758269486705363402307773455639773007422079769567310663689852817179059312032143236005345809847891632360620594960862 gift = 139200565274113272217771369795858181556454302427519574149545982701 &#34;&#34;&#34; The program leaks N = p*q, the ciphertext c, and gift = (p&#43;q) &gt;&gt; 40 — an approximation of s = p&#43;q with the lower 40 bits removed. Recovering p and q (and thus d) reduces to finding the unknown 40 lower bits of s. Once p,q are recovered, decrypt c to obtain the flag.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to FirstBlog" href="http://localhost:1313/posts/firstblog/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -173,38 +190,6 @@ Output: The expected number of offspring displaying the dominant phenotype in th
   <footer class="entry-footer"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></footer>
   <a class="entry-link" aria-label="post link to ROSALIND - IEV" href="http://localhost:1313/posts/calculating_expected_offspring/"></a>
 </article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/Law-of-Segregation.jpg" alt="Quy luật 1 của Mendel">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Sec
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Giải toán di truyền bằng Python 1. Quy luật phân ly độc lập Quan trọng để hiểu được mục này, cần blablabla
-2. Các bước thực hiện trong Python cmiwoef
-3. Giải nghĩa từng bước và cách để đạt được Define
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Sec" href="http://localhost:1313/posts/secondblog/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">What Stanford students actually use ChatGPT for
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Rethink the Journey where AI support us, or we depent on AI 1. What kind of work do you delegate for ChatGPT &amp; What kinds of work do you keep for yourself? 2. Has AI impacted your decision on what to major in? Về vấn đề liệu có phụ thuộc và giới hạn bản thân
-3. Do you trust that professors know how to teach in AI world? Về vấn đề chọn nơi học liệu còn có bị cản lại
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-24 19:06:50 +0700 +07'>February 24, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to What Stanford students actually use ChatGPT for" href="http://localhost:1313/posts/purpose_for_keep_moving/"></a>
-</article>
     </main>
     
 <footer class="footer">
@@ -220,7 +205,101 @@ Output: The expected number of offspring displaying the dominant phenotype in th
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a>
+</a><script>
+document.addEventListener("DOMContentLoaded", function() {
+    
+    
+    document.querySelectorAll('.main, .header, .footer').forEach(el => {
+        el.style.position = 'relative';
+        el.style.zIndex = '10';
+    });
+
+    
+    const canvas = document.createElement('canvas');
+    canvas.id = 'particle-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100vw';
+    canvas.style.height = '100vh';
+    canvas.style.zIndex = '0'; 
+    canvas.style.pointerEvents = 'none'; 
+    document.body.prepend(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    const numParticles = 70;
+    const maxDistance = 170;
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 2; 
+            this.vy = (Math.random() - 0.5) * 2;
+            this.radius = 3; 
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            
+            ctx.fillStyle = 'rgba(129,130,131)'; 
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height); 
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                let dx = particles[i].x - particles[j].x;
+                let dy = particles[i].y - particles[j].y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < maxDistance) {
+                    let alpha = 1 - (distance / maxDistance); 
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    
+                    ctx.strokeStyle = `rgba(129,130,131, ${alpha})`; 
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+});
+</script>
 
 <script>
     let menu = document.getElementById('menu');

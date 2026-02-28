@@ -1,0 +1,95 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Nâng các khối nội dung (Header, Main, Footer) lên lớp trên cùng (z-index: 10)
+    // Điều này giúp cậu không cần dùng đến file custom.css nữa!
+    document.querySelectorAll('.main, .header, .footer').forEach(el => {
+        el.style.position = 'relative';
+        el.style.zIndex = '10';
+    });
+
+    // 2. Tạo Canvas và chèn vào body
+    const canvas = document.createElement('canvas');
+    canvas.id = 'particle-canvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100vw';
+    canvas.style.height = '100vh';
+    canvas.style.zIndex = '0'; // Đưa về 0 để Canvas nằm TRÊN lớp nền mặc định của PaperMod
+    canvas.style.pointerEvents = 'none'; // Đảm bảo không chặn các thao tác click chuột
+    document.body.prepend(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    const numParticles = 70;
+    const maxDistance = 170;
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 2; 
+            this.vy = (Math.random() - 0.5) * 2;
+            this.radius = 3; 
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            // Tớ đang để màu Xanh Bio lục bảo, cậu có thể đổi thành màu xám (40, 40, 40) nếu muốn
+            ctx.fillStyle = 'rgba(129,130,131)'; 
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height); 
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                let dx = particles[i].x - particles[j].x;
+                let dy = particles[i].y - particles[j].y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < maxDistance) {
+                    let alpha = 1 - (distance / maxDistance); 
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    // Màu của các sợi liên kết
+                    ctx.strokeStyle = `rgba(129,130,131, ${alpha})`; 
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+});
+</script>

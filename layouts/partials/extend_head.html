@@ -8,3 +8,35 @@
         ]
     });">
 </script>
+
+<style>
+    /* 1. Tạo khung nền trắng cho phần nội dung chính (Main) */
+    .main {
+        background: rgba(255, 255, 255, 0.97) !important; /* Màu trắng đục 97% */
+        padding: 40px !important; /* Tạo khoảng trống để chữ không sát lề */
+        border-radius: 12px !important; /* Bo góc mềm mại */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important; /* Đổ bóng nhẹ cho khung nổi lên */
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 2. Tạo khung nền trắng cho thanh Menu (Header) ở trên cùng */
+    .header {
+        background: rgba(255, 255, 255, 0.97) !important;
+        padding: 10px 30px !important;
+        border-radius: 0 0 12px 12px !important; /* Chỉ bo góc ở dưới */
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* 3. Tương thích với chế độ Dark Mode (nếu người đọc bật nền đen) */
+    .dark .main, .dark .header {
+        background: rgba(29, 30, 32, 0.97) !important; /* Màu xám đen đục */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* Đảm bảo khung nội dung luôn đè lên trên Canvas */
+    .main, .header {
+        position: relative;
+        z-index: 10;
+    }
+</style>
