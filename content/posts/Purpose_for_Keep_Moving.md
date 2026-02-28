@@ -1,6 +1,6 @@
 +++
 date = '2026-02-24T19:06:50+07:00'
-draft = false
+draft = true
 title = 'What Stanford students actually use ChatGPT for'
 math = true
 tags = ['motivation' , 'AI'] 
